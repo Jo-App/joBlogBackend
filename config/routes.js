@@ -2,6 +2,7 @@ var home = require('../app/controllers/home');
 var board = require('../app/controllers/board');
 var index = require('../app/controllers/index.js')
 var devBoard = require('../app/controllers/devBoard.js');
+var user = require('../app/controllers/user.js');
 
 //you can include all your controllers
 
@@ -17,6 +18,7 @@ module.exports = function (app, passport) {
 
     app.get('/', index.index);
     app.get('/devBoardList', devBoard.boardList);
+    app.get('/userList', user.list);
 
 
 }
