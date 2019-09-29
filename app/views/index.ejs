@@ -1,23 +1,35 @@
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JoBlog API</title>
 </head>
+
 <body>
   <h1>JoBlog API</h1>
 
-  <div class="api-content"> 
+  <div class="api-content">
     <a href="/devBoardList">/devBoardList</a> 테스트
   </div>
   <div class="api-content">
-    <a href="/userList">/userList</a><span>유저 목록</span>
+    <a href="/userList">/userList</a><span>GET 유저 목록</span>
+  </div>
+  <div class="api-content">
+    <a href="/userSave">/userSave</a><span>POST 유저 저장</span>
+  </div>
+  <div class="api-content">
+    <a href="/userUpdate">/userUpdate</a><span>POST 유저 수정</span>
+  </div>
+  <div class="api-content">
+    <a href="/userDelete">/userDelete</a><span>POST 유저 삭제</span>
   </div>
 </body>
 <style>
-  .api-content{
-    padding : 5px 10px;
+  .api-content {
+    padding: 5px 10px;
   }
 </style>
+
 </html>

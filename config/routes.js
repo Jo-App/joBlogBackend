@@ -8,17 +8,23 @@ var user = require('../app/controllers/user.js');
 
 module.exports = function (app, passport) {
 
-    // app.get('/login', home.login);
-    // app.get('/signup', home.signup);
+  // app.get('/login', home.login);
+  // app.get('/signup', home.signup);
 
-    // app.get('/test', board.boardList);
+  // app.get('/test', board.boardList);
 
-    // app.get('/', home.loggedIn, home.home);//home
-    // app.get('/home', home.loggedIn, home.home);//home
+  // app.get('/', home.loggedIn, home.home);//home
+  // app.get('/home', home.loggedIn, home.home);//home
 
-    app.get('/', index.index);
-    app.get('/devBoardList', devBoard.boardList);
-    app.get('/userList', user.list);
+  app.get('/', index.index);
+  app.get('/devBoardList', devBoard.boardList);
+  app.get('/userList', user.list); //유저 목록
+  app.post('/userSave', user.save); //유저 생성
+  app.post('/userUpdate', user.update); //유저 수정
+  app.post('/userDelete', user.delete); //유저 삭제
+
+
+
 
 
 }
