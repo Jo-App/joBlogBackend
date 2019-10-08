@@ -30,9 +30,29 @@ exports.save = function (req, res, next) {
     if (!err) {
       console.log(rows);
       console.log(fields);
-      res.send(true)
+      res.send(true);
+       
     } else {
-      res.send(err)
+      res.send(err);
+       
+    }
+  })
+},
+
+//유저 상세
+exports.detail = function(req, res, next) {
+  console.log("유저 상세")
+  console.log(req.body.params)
+  var No = req.body.params.No;
+  var sql = 'SELECT * FROM USER WHERE No = ?';
+  var params = [No];
+  mysqlDB.query(sql, params, function (err, rows, fields) {
+    if(!err) {
+      res.send(rows);
+       
+    } else {
+      res.send(err);
+       
     }
   })
 },

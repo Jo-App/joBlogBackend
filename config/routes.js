@@ -20,6 +20,7 @@ module.exports = function (app, passport) {
   app.get('/devBoardList', devBoard.boardList);
   app.get('/userList', user.list); //유저 목록
   app.post('/userSave', user.save); //유저 생성
+  app.post('/userDetail', user.detail); //유저 상세
   app.post('/userUpdate', user.update); //유저 수정
   app.post('/userDelete', user.delete); //유저 삭제
 
